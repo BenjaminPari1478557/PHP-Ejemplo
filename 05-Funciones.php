@@ -24,5 +24,6 @@ function calcular($operador,$numero,$numero2){
         return $numero/$numero2;
     }
 }
-echo "El total de la suma es :".calcular("+",10,34)
+echo "El total de la suma es :".calcular("+",10,34);
+
 ?>
