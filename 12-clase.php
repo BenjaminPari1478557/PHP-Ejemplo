@@ -29,7 +29,7 @@
             return $this->primerNumero**$this->segundoNumero;
         }
         public function raiz(){
-            return sqrt($this->primerNumero,$this->segundoNumero);
+            return $this->primerNumero**(1/$this->segundoNumero);
             
         }
     }
