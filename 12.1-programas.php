@@ -19,28 +19,28 @@ switch ($opcion) {
     case 1:
         $calculadora = new Calculadora($numero1,$numero2);
         $resultado=$calculadora->sumar();
-        echo "\n El resultado de la suma es ".$resultado;
         break;
     case 2:
         $resultado=$calculadora->restar();
-        echo "\n El resultado de la restar es ".$resultado;
         break;
     case 3:
         $resultado=$calculadora->multiplicar();
-        echo "\n El resultado de la suma es ".$resultado;
         break;
     case 4:
         $resultado=$calculadora->dividir();
-        echo "\n El resultado de la division es ".$resultado;
+        
         break;
     case 5:
         $resultado=$calculadora->potencia();
-        echo "\n El resultado de la potencia es ".$resultado; 
         break;
     case 6:
         $resultado=$calculadora->raiz();
-        echo "\n El resultado de la raiz es ".$resultado;
         break;
     default:
         break;
+}
+if ($resultado=="Divisibilidad imposible"){
+    echo "Error al dividir entre 0";
+}else{
+    echo "El resultado de la operacion es : ".$resultado;
 }
