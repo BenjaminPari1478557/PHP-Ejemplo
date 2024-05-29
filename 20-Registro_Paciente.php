@@ -18,6 +18,12 @@
         <input type="text" id="talla" name="talla" required /><br>
         <label for="peso">Peso (kg):</label>
         <input type="text" id="peso" name="peso"><br>
+        <label for="sexo">Sexo :</label>
+        <select name="sexo" id="sexo">
+            <option value="1">1- Hombre</option>
+            <option value="2">2- Mujer</option>
+            <option value="0">0- Indefinido</option>
+        </select><br>
         <h2><u>Sintomas</u></h2>
         <input type="checkbox" name="tos" id="tos" value="1">
         <label for="tos">Tos</label><br>

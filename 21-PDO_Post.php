@@ -6,6 +6,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $talla = $_POST['talla'];
     $peso = $_POST['peso'];
 
+    $sexo = array_key_exists("sexo",$_POST) ? $_POST['sexo'] : "0";
+    $sexo = $sexo == "" ? "0" : $sexo;
+
     $tos = array_key_exists("tos",$_POST) ? $_POST['tos'] : "0";
     $tos = $tos == "" ? "0" : $tos;
     $fiebre = array_key_exists("fiebre",$_POST) ? $_POST['fiebre'] : "0";
@@ -35,7 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     else {
         $resultado ="0";
     }
-    //3 opciones en le combobox hombre=1 mujer=2 indefinido=0
     $servername = "localhost";
     $username = "root";
     $password ="";    
@@ -48,10 +50,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         `edad`, `talla_m`, `peso_kg`, `sintoma_tos`,
         `sintoma_fiebre`, `sintoma_disnea`, `sintoma_dolormuscular`,
         `sintoma_gripe`, `sintoma_presionalta`, `sintoma_fatiga`,
-            `sintoma_garraspera`, `ultima_fecha_vacunacion`, `resultado`)
+            `sintoma_garraspera`, `ultima_fecha_vacunacion`, `resultado`,`sexo`)
             VALUES ('$nombre', '$apellido', $edad, $talla, $peso, 
             '$tos', '$fiebre', '$disnea', '$dolor_muscular','$gripe'
-            , '$Presion_alta', '$Fatiga', '$Garraspera', '$fecha', '$resultado');";
+            , '$Presion_alta', '$Fatiga', '$Garraspera', '$fecha', '$resultado','$sexo');";
 
         $conn->exec($sql);    
         $conn->commit();
