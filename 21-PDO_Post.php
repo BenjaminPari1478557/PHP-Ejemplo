@@ -55,7 +55,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             '$tos', '$fiebre', '$disnea', '$dolor_muscular','$gripe'
             , '$Presion_alta', '$Fatiga', '$Garraspera', '$fecha', '$resultado','$sexo');";
 
-        $conn->exec($sql);    
+        $conn->exec($sql);
+
+        $sql="SELECT * FROM pacientes where nombres='$nombre'";
+        $pacientes = $conn->query($sql);//edad BETWEEN 18 AND 19
+    foreach ($pacientes as $row) {
+        echo $row["nombres"]." ".$row["apellidos"].", EDAD : ".$row["edad"]."<br>".
+        " Talla (cm): ".$row["talla_m"]."<br>".
+        " Peso (kg): ".$row["peso_kg"]."<br>".
+        " Tos: ".$row["sintoma_tos"]."<br>".
+        " Fiebre: ".$row["sintoma_fiebre"]."<br>".
+        " Fiebre: ".$row["sintoma_fiebre"]."<br>".
+        " Disnea: ".$row["sintoma_disnea"]."<br>".
+        " Dolor muscular: ".$row["sintoma_dolormuscular"]."<br>".
+        " Gripe: ".$row["sintoma_gripe"]."<br>".
+        " Presion Alta: ".$row["sintoma_presionalta"]."<br>".
+        " Fatiga: ".$row["sintoma_fatiga"]."<br>".
+        " Garraspera: ".$row["sintoma_garraspera"]."<br>".
+        " Ultima fecha de vacunacion: ".$row["ultima_fecha_vacunacion"]."<br>";
+    }     
         $conn->commit();
         echo "Fue registrado correctamente.";
     }
