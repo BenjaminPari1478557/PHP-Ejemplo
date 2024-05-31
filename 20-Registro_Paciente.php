@@ -9,7 +9,7 @@
     <h1>Registro de Paciente</h1>
     <form id="formulario" action="21-PDO_post.php" method="post">    
         <label for ="nombre">Nombres:</label> 
-        <input type="text" id="nombre" name="nombre" required><br>
+        <input  type="text" id="nombre" name="nombre" required><br>
         <label for= "apellido">Apellidos:</label>
         <input type ="text" id="apellido" name="apellido"><br>
         <label for="edad">Edad :</label>
@@ -18,12 +18,12 @@
         <input type="text" id="talla" name="talla" required /><br>
         <label for="peso">Peso (kg):</label>
         <input type="text" id="peso" name="peso"><br>
-        <label for="sexo">Sexo :</label>
-        <select name="sexo" id="sexo">
+        <!-- <label for="sexo">Sexo :</label> -->
+        <!-- <select name="sexo" id="sexo">
             <option value="1">1- Hombre</option>
             <option value="2">2- Mujer</option>
             <option value="0">0- Indefinido</option>
-        </select><br>
+        </select><br> -->
         <h2><u>Sintomas</u></h2>
         <input type="checkbox" name="tos" id="tos" value="1">
         <label for="tos">Tos</label><br>

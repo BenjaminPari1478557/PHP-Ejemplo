@@ -6,8 +6,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $talla = $_POST['talla'];
     $peso = $_POST['peso'];
 
-    $sexo = array_key_exists("sexo",$_POST) ? $_POST['sexo'] : "0";
-    $sexo = $sexo == "" ? "0" : $sexo;
+    // $sexo = array_key_exists("sexo",$_POST) ? $_POST['sexo'] : "0";
+    // $sexo = $sexo == "" ? "0" : $sexo;
 
     $tos = array_key_exists("tos",$_POST) ? $_POST['tos'] : "0";
     $tos = $tos == "" ? "0" : $tos;
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     $servername = "localhost";
     $username = "root";
-    $password ="";    
+    $password ="pass";    
     $dbname = "covid";    
     try{
         $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username,$password);
@@ -50,10 +50,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         `edad`, `talla_m`, `peso_kg`, `sintoma_tos`,
         `sintoma_fiebre`, `sintoma_disnea`, `sintoma_dolormuscular`,
         `sintoma_gripe`, `sintoma_presionalta`, `sintoma_fatiga`,
-            `sintoma_garraspera`, `ultima_fecha_vacunacion`, `resultado`,`sexo`)
+            `sintoma_garraspera`, `ultima_fecha_vacunacion`, `resultado`
+            )
             VALUES ('$nombre', '$apellido', $edad, $talla, $peso, 
             '$tos', '$fiebre', '$disnea', '$dolor_muscular','$gripe'
-            , '$Presion_alta', '$Fatiga', '$Garraspera', '$fecha', '$resultado','$sexo');";
+            , '$Presion_alta', '$Fatiga', '$Garraspera', '$fecha', '$resultado'
+            );";
 
         $conn->exec($sql);
 
