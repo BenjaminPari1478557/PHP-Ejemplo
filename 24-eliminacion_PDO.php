@@ -13,7 +13,7 @@ $id=$_POST["id"];
 
         $conn->exec($sql);
         $conn->commit();
-        echo "Fue editado correctamente.";
+        echo "Fue eliminado correctamente.";
     }
     catch(Exception $e) {
         echo "Error : ".$e->getMessage();
