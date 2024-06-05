@@ -15,7 +15,7 @@
     <input type="checkbox" name="disnea" value="1"><label id="disnea" name="disnea">Disnea</label>
     <input type="checkbox" name="dolor" value="1"><label id="dolor" name="dolor">Dolor muscular</label>
     <button type="button" onclick="buscarPacientes();">Buscar</button>
-    <table style="border: 1px solid black;">
+    <table style="border: 1px solid black;" id="tabla">
         <tr>
             <td>Paciente</td>
             <td>Edad</td>

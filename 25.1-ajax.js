@@ -8,9 +8,29 @@ function buscarPacientes(){
         url:"26-ajax_PDO.php",
         type:"post",
         data:datos,
-        success:function(arg){
-            console.log(arg);
+        success:function(result){
+            //console.log(result);
+            debugger;
+            console.log(result);
+            const pacientes = $.parseJSON(result);
+            pacientes.forEach(item => {
+                agregarFilas("#tabla",item);
+            });
         }
     })
     return;
+}
+function agregarFilas(Id,paciente){
+    const html=
+    "<tr>"+
+            "<td>"+paciente.nombres+"</td>"+
+            "<td>"+paciente.edad+"</td>"+
+            "<td>"+paciente.talla_m+"</td>"+
+            "<td>"+paciente.peso_kg+"</td>"+
+            "<td>"+paciente.sintoma_tos+"</td>"+
+            "<td>"+paciente.sintoma_fiebre+"</td>"+
+            "<td>"+paciente.sintoma_disnea+"</td>"+
+            "<td><button type='button'>Editar</></td>"+
+        "</tr>";
+        $(Id + " tr:last").after(html);
 }
