@@ -91,3 +91,17 @@ function editar(result) {
       }
 
 }
+
+function nuevoPaciente(){
+    const $nombre = $("#nombre2").val();
+    const $edad = $("#edad2").val();
+    const $talla = $("#talla2").val();
+    const $peso = $("#peso2").val();
+    const $tos = $("#tos2").val();
+    const $fiebre = $("#fiebre2").val();
+    const $disnea = $("#disnea2").val();
+
+    $.ajax({
+        
+    })
+}
