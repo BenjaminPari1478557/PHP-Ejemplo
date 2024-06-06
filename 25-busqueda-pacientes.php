@@ -61,7 +61,7 @@
                     <br>
                     Sintomas
                     <br>
-                    <input type="checkbox" id="tos2" <?php  ?> name="tos2" value="1">
+                    <input type="checkbox" id="tos2" name="tos2" value="1">
                     <label id="tos" class="form-label" name="tos">Tos</label><br>
                     <input type="checkbox" id="fiebre2" name="fiebre2" value="1">
                     <label id="fiebre" class="form-label" name="fiebre">  Fiebre</label><br>
@@ -85,21 +85,21 @@
                 <div class="modal-body">
                     <input type='hidden' id='id_paciente'>
                     <label for="name" class="form-label">Nombre:</label>
-                    <input type="text" class="form-control" id="nombre2" name="nombre2"/>
+                    <input type="text" class="form-control" id="nombre3" name="nombre2"/>
                     <label for="name" class="form-label">Edad:</label>
-                    <input type="text" class="form-control" id="edad2" name="nombre2"/>
+                    <input type="text" class="form-control" id="edad3" name="nombre2"/>
                     <label for="name" class="form-label">Talla:</label>
-                    <input type="text" class="form-control" id="talla2" name="nombre2"/>
+                    <input type="text" class="form-control" id="talla3" name="nombre2"/>
                     <label for="name" class="form-label">Peso:</label>
-                    <input type="text" class="form-control" id="peso2" name="nombre2"/>
+                    <input type="text" class="form-control" id="peso3" name="nombre2"/>
                     <br>
                     Sintomas
                     <br>
-                    <input type="checkbox" id="tos2" <?php  ?> name="tos2" value="1">
+                    <input type="checkbox" id="tos3" name="tos" value="1">
                     <label id="tos" class="form-label" name="tos">Tos</label><br>
-                    <input type="checkbox" id="fiebre2" name="fiebre2" value="1">
+                    <input type="checkbox" id="fiebre3" name="fiebre2" value="1">
                     <label id="fiebre" class="form-label" name="fiebre">  Fiebre</label><br>
-                    <input type="checkbox" id="disnea2" name="disnea2" value="1">
+                    <input type="checkbox" id="disnea3" name="disnea2" value="1">
                     <label id="disnea" class="form-label" name="disnea">  Disnea</label><br>
                 </div>
                 <button type="button" class="btn btn-primary" onclick="editarPacientes();">NuevoPaciente</button>
