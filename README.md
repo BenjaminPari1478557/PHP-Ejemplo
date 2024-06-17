@@ -5,7 +5,8 @@ Ejemplos de PHP
 - Del ejemplo numero 25 al final fue mi proyecto que mas problemas tuve puesto que no sabia aun utilizar html al 25% 
 ahora si asique no hay problemas, tampoco entendi ajax y reo que sigo si entender puesto que siento que puedo aprovecharlo aun mas
 - Tambien a ningun archivo le meti CSS por flojera, espero algun dia hacerlo todo bonito
-#Aprendi:
+
+Aprendi:
 - Utilizar PHP
 - Saber de cierta manera que es AJAX
 - Utilizar mas metodos de acceso a base de datos
