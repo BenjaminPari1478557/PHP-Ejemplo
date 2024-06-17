@@ -1,6 +1,5 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id=$_POST["id"];
     $nombre = $_POST['nombre'];
     $edad = $_POST['edad'];
     $talla = $_POST['talla'];
@@ -16,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $servername = "localhost";
     $username = "root";
-    $password ="";    
+    $password ="pass";    
     $dbname = "covid";    
     try{
         $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username,$password);
@@ -31,10 +30,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         , `sintoma_gripe`, `sintoma_presionalta`
         , `sintoma_fatiga`, `sintoma_garraspera`
         , `ultima_fecha_vacunacion`) 
-        VALUES ('asd', 'asd',
-         45, 25,
-          25, '0',
-           '1', '0', '1', '0', '0', '0', '0', '2024-06-06');";
+        VALUES ('$nombre', 'no determinado',
+         $edad, $talla,
+         $peso, '$tos',
+           '$fiebre', '$disnea',
+           '0', '0',
+            '0', '0',
+             '0', '2024-06-06');";
 
         $conn->exec($sql);
         $conn->commit();

@@ -12,11 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fiebre = $fiebre == "" ? "0" : $fiebre;
     $disnea = array_key_exists("disnea",$_POST) ? $_POST['disnea'] : "0";
     $disnea = $disnea == "" ? "0" : $disnea;
-    
 
     $servername = "localhost";
     $username = "root";
-    $password ="";    
+    $password ="pass";    
     $dbname = "covid";    
     try{
         $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username,$password);

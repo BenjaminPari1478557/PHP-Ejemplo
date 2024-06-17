@@ -3,7 +3,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     try {
         $nombre=$_POST["nombre"];
         $user = "root";
-        $pass = "";
+        $pass = "pass";
         $host = "mysql:host=localhost;dbname=covid";
 
         $conn = new PDO($host, $user, $pass);
