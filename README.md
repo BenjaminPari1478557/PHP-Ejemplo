@@ -11,3 +11,5 @@ Aprendi:
 - Saber de cierta manera que es AJAX
 - Utilizar mas metodos de acceso a base de datos
 - Preparar sopaipillas y hacer echo ("Hello Mundo");
+- 
+- Hacer saltos de linea en el documento README.md  ... si, demore 3 commits en aprender
