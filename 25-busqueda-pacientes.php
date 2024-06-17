@@ -102,7 +102,7 @@
                     <input type="checkbox" id="disnea3" name="disnea2" value="1">
                     <label id="disnea" class="form-label" name="disnea">  Disnea</label><br>
                 </div>
-                <button type="button" class="btn btn-primary" onclick="editarPacientes();">NuevoPaciente</button>
+                <button type="button" class="btn btn-primary" onclick="nuevoPaciente();">NuevoPaciente</button>
             </div>
         </div>
     </div>
